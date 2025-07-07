@@ -307,7 +307,7 @@ export default function FashionFilmPage() {
                         whileTap={{ scale: 0.9 }}
                         className="p-4 bg-white/20 hover:bg-white/30 rounded-full backdrop-blur-sm"
                       >
-                        <Play className="w-8 h-8 text-white fill-current" />
+                        <Play className="w-8 h-8 text-white -current" />
                       </motion.div>
                     </div>
                   </motion.div>

@@ -144,7 +144,7 @@ export default function ImageManager({
                 <NoOptImage
                   src={src}
                   alt={`Image ${index + 1}`}
-                  fill
+                  
                   sizes="200px"
                   className="object-cover"
                 />
@@ -232,7 +232,7 @@ export default function ImageManager({
                 <NoOptImage
                   src={src}
                   alt={`Image ${index + 1}`}
-                  fill
+                  
                   sizes="200px"
                   className="object-cover"
                 />

@@ -81,7 +81,7 @@ export default function ProfileImage({
             focus: 'face'
           })}
           alt={alt}
-          fill
+          
           className="object-cover"
           sizes={`${width}px`}
         />

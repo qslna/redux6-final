@@ -99,7 +99,7 @@ export default function StackGallery({
                     format: 'webp'
                   })}
                   alt={image.name}
-                  fill
+                  
                   className="object-cover"
                   placeholder="blur"
                   blurDataURL={createBlurPlaceholder(image.url)}
@@ -170,7 +170,7 @@ export default function StackGallery({
                   format: 'webp'
                 })}
                 alt={selectedImage.name}
-                fill
+                
                 className="object-contain rounded-lg"
                 sizes="(max-width: 768px) 100vw, 1200px"
               />

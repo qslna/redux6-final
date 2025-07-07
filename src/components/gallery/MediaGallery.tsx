@@ -184,7 +184,7 @@ export default function MediaGallery({
                     format: 'webp'
                   })}
                   alt={item.name}
-                  fill
+                  
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />

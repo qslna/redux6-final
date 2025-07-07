@@ -134,7 +134,7 @@ export default function StackGallery({
               <SimpleImageManager
                 src={image.src}
                 alt={image.alt}
-                fill
+                
                 className="object-cover"
                 folder={folder}
                 sizes="(max-width: 768px) 100vw, 50vw"

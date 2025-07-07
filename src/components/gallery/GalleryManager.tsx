@@ -399,7 +399,7 @@ export default function GalleryManager({
                         format: 'webp'
                       })}
                       alt={image.name}
-                      fill
+                      
                       className="object-cover"
                       sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 20vw"
                     />
@@ -436,7 +436,7 @@ export default function GalleryManager({
                         format: 'webp'
                       })}
                       alt={image.name}
-                      fill
+                      
                       className="object-cover"
                       sizes="64px"
                     />

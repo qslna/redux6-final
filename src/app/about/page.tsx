@@ -57,7 +57,7 @@ export default function AboutPage() {
           <SimpleImageManager
             src="/images/designers/kimbomin/cinemode/NOR_7419-11.jpg"
             alt="About Hero"
-            fill
+            
             className="object-cover"
             folder="about"
             sizes="100vw"
@@ -139,7 +139,7 @@ export default function AboutPage() {
                       <SimpleImageManager
                         src={section.image}
                         alt={section.title}
-                        fill
+                        
                         className="object-cover group-hover:scale-110 transition-transform duration-700"
                         folder="about"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

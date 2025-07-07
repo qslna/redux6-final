@@ -173,7 +173,7 @@ export default function VideoThumbnailManager({
         <NoOptImage
           src={getThumbnailUrl()}
           alt={`${videoTitle} 썸네일`}
-          fill
+          
           className="object-cover"
           sizes="(max-width: 768px) 100vw, 400px"
         />

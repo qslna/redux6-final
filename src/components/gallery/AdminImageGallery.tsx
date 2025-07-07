@@ -231,7 +231,7 @@ export default function AdminImageGallery({
                   format: 'webp'
                 })}
                 alt={image.name}
-                fill
+                
                 className="object-cover"
                 sizes="400px"
               />
@@ -407,7 +407,7 @@ export default function AdminImageGallery({
                       format: 'webp'
                     })}
                     alt={image.name}
-                    fill
+                    
                     className="object-cover"
                     sizes="300px"
                   />
@@ -446,7 +446,7 @@ export default function AdminImageGallery({
                       format: 'webp'
                     })}
                     alt={image.name}
-                    fill
+                    
                     className="object-cover"
                     sizes="64px"
                   />
