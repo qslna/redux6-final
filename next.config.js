@@ -6,6 +6,11 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  images: {
+    unoptimized: true,
+    domains: [],
+    remotePatterns: [],
+  },
 };
 
 export default nextConfig;
