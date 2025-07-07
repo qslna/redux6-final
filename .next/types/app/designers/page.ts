@@ -1,4 +1,4 @@
-// File: /mnt/c/Users/t9140/OneDrive/바탕 화면/redux6/src/app/designers/page.tsx
+// File: /mnt/c/Users/t9140/OneDrive/바탕 화면/redux6-final/src/app/designers/page.tsx
 import * as entry from '../../../../src/app/designers/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
