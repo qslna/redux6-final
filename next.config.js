@@ -4,10 +4,18 @@ const nextConfig = {
   poweredByHeader: false,
   images: {
     unoptimized: true,
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'attachment',
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'ik.imagekit.io',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
         port: '',
         pathname: '/**',
       }
