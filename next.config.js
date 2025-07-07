@@ -10,12 +10,11 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**',
-      },
-    ],
+    loader: 'custom',
+    loaderFile: './image-loader.js',
+  },
+  experimental: {
+    esmExternals: false,
   },
 };
 

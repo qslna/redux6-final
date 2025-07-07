@@ -4,9 +4,9 @@
     "files": [
       "static/chunks/e37a0b60-60644db7b3ef72f3.js",
       "static/chunks/aaea2bcf-88b6c30183af664e.js",
-      "static/chunks/565-44261fcd781b2c74.js",
+      "static/chunks/565-3b6b48bc781ba0a1.js",
       "static/chunks/498-aee0304371f44c89.js",
-      "static/chunks/449.5108b443ca04de3c.js"
+      "static/chunks/642.edbaccf0c138ac14.js"
     ]
   },
   "app/page.tsx -> @/components/layout/DesignersPreview": {
@@ -14,11 +14,11 @@
     "files": [
       "static/chunks/e37a0b60-60644db7b3ef72f3.js",
       "static/chunks/aaea2bcf-88b6c30183af664e.js",
-      "static/chunks/565-44261fcd781b2c74.js",
+      "static/chunks/565-3b6b48bc781ba0a1.js",
       "static/chunks/498-aee0304371f44c89.js",
       "static/chunks/181-780c07556f745252.js",
       "static/chunks/988-ce8312b4fdceff6b.js",
-      "static/chunks/484.6201e514eea65f09.js"
+      "static/chunks/307.370f43703fa211b8.js"
     ]
   }
 }

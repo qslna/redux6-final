@@ -2,7 +2,7 @@
 
 import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
+import NoOptImage from './NoOptImage';
 import { useToast } from '@/components/ToastProvider';
 import { useAdmin } from '@/hooks/useAdmin';
 
@@ -83,13 +83,13 @@ export default function SimpleImageManager({
 
   return (
     <div className={`relative group ${className}`}>
-      <Image
+      <NoOptImage
         src={hasError ? fallbackSrc : currentSrc}
         alt={alt}
         fill={fill}
         width={!fill ? width : undefined}
         height={!fill ? height : undefined}
-        sizes={sizes || "100vw"}
+        sizes={sizes}
         priority={priority}
         className={`${className} ${isAdmin ? 'cursor-pointer' : ''}`}
         onClick={handleClick}
