@@ -556,6 +556,7 @@ export default function UniversalGallery({
                   alt={selectedItem.name}
                   width={1200}
                   height={800}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
                   className="max-w-full max-h-full object-contain rounded-lg"
                 />
               )}
