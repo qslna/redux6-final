@@ -74,13 +74,11 @@ export default function FloatingParticles({ count = 50, className = '' }: Floati
         // 파티클 그리기
         ctx.save();
         ctx.globalAlpha = particle.opacity;
-        ctx.fillStyle = `hsl(${particle.hue}, 70%, 60%)`;
         ctx.shadowBlur = 10;
         ctx.shadowColor = `hsl(${particle.hue}, 70%, 60%)`;
         
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fill();
         ctx.restore();
       });
 

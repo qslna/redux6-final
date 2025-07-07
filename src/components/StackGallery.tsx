@@ -137,7 +137,6 @@ export default function StackGallery({
                 
                 className="object-cover"
                 folder={folder}
-                sizes="(max-width: 768px) 100vw, 50vw"
               />
               
               {/* Remove Button for Admin */}

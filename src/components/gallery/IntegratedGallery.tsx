@@ -7,7 +7,6 @@ import {
   Plus, X, Upload, Loader2, Grid, Layers, 
   Image as ImageIcon, Video, Play, Pause, Volume2, VolumeX, Trash2
 } from 'lucide-react';
-import NoOptImage from '@/components/NoOptImage';
 import { buildImageKitUrl } from '@/lib/imagekit';
 
 interface MediaItem {
@@ -365,7 +364,7 @@ export default function IntegratedGallery({
                       </div>
                     </div>
                   ) : (
-                    <NoOptImage
+                    <img
                       src={buildImageKitUrl(item.url, {
                         width: 400,
                         height: 500,
@@ -375,8 +374,6 @@ export default function IntegratedGallery({
                       alt={item.name}
                       
                       className="object-cover"
-                      sizes="400px"
-                      unoptimized
                     />
                   )}
                   
@@ -540,7 +537,7 @@ export default function IntegratedGallery({
                       </div>
                     </div>
                   ) : (
-                    <NoOptImage
+                    <img
                       src={buildImageKitUrl(item.url, {
                         width: 300,
                         height: 300,
@@ -550,8 +547,6 @@ export default function IntegratedGallery({
                       alt={item.name}
                       
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      unoptimized
                     />
                   )}
                   
@@ -604,14 +599,12 @@ export default function IntegratedGallery({
                   className="max-w-full max-h-full rounded-lg"
                 />
               ) : (
-                <NoOptImage
+                <img
                   src={selectedItem.url}
                   alt={selectedItem.name}
                   width={1200}
                   height={800}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
                   className="max-w-full max-h-full object-contain rounded-lg"
-                  unoptimized
                 />
               )}
               

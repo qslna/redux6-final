@@ -2,7 +2,6 @@
 
 import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import NoOptImage from '@/components/NoOptImage';
 import { Play, Plus, X, Film, Camera, Download } from 'lucide-react';
 import { cn } from '@/utils/cn';
 import { buildImageKitUrl } from '@/lib/imagekit';
@@ -176,7 +175,7 @@ export default function MediaGallery({
               onClick={() => handleItemClick(item)}
             >
               <div className="relative aspect-video">
-                <NoOptImage
+                <img
                   src={buildImageKitUrl(item.thumbnailUrl || item.url, {
                     width: 400,
                     height: 300,
@@ -186,7 +185,6 @@ export default function MediaGallery({
                   alt={item.name}
                   
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
                 
                 {/* Media Type Indicator */}
@@ -280,7 +278,7 @@ export default function MediaGallery({
                   style={{ maxHeight: '80vh' }}
                 />
               ) : (
-                <NoOptImage
+                <img
                   src={buildImageKitUrl(selectedItem.url, {
                     quality: 95,
                     format: 'webp'
@@ -288,7 +286,6 @@ export default function MediaGallery({
                   alt={selectedItem.name}
                   width={1200}
                   height={800}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
                   className="w-full h-auto rounded-lg"
                   style={{ maxHeight: '80vh', objectFit: 'contain' }}
                 />

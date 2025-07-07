@@ -3,7 +3,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import Link from 'next/link';
-import NoOptImage from '@/components/NoOptImage';
 import { ArrowRight, Instagram, Mail } from 'lucide-react';
 import { fadeIn, staggerContainer } from '@/utils/animations';
 import { buildImageKitUrl } from '@/lib/imagekit';
@@ -190,7 +189,7 @@ export default function DesignersPage() {
                 <Link href={`/designers/${designer.id}`}>
                   <div className="group cursor-pointer">
                     <div className="relative aspect-[3/4] overflow-hidden rounded-lg mb-6">
-                      <NoOptImage
+                      <img
                         src={buildImageKitUrl(designer.portfolioImage, {
                           width: 600,
                           height: 800,
@@ -200,7 +199,6 @@ export default function DesignersPage() {
                         alt={designer.name}
                         
                         className="object-cover group-hover:scale-110 transition-transform duration-700"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                       
                       {/* Overlay */}

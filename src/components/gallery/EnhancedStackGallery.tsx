@@ -2,7 +2,6 @@
 
 import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import NoOptImage from '@/components/NoOptImage';
 import { Plus, X, Settings, Eye } from 'lucide-react';
 import { cn } from '@/utils/cn';
 import { StackGalleryProps, GalleryImage } from '@/types';
@@ -245,7 +244,7 @@ export default function EnhancedStackGallery({
                   boxShadow: '0 25px 50px rgba(0, 0, 0, 0.3)' 
                 }}
               >
-                <NoOptImage
+                <img
                   src={buildImageKitUrl(image.url, {
                     width: 400,
                     height: 500,
@@ -257,7 +256,6 @@ export default function EnhancedStackGallery({
                   className="object-cover"
                   placeholder="blur"
                   blurDataURL={createBlurPlaceholder(image.url)}
-                  sizes="(max-width: 768px) 100vw, 400px"
                 />
                 
                 {/* Overlay gradient */}
@@ -361,7 +359,7 @@ export default function EnhancedStackGallery({
               className="relative max-w-4xl max-h-[90vh] w-full h-full"
               onClick={(e) => e.stopPropagation()}
             >
-              <NoOptImage
+              <img
                 src={buildImageKitUrl(selectedImage.url, {
                   quality: 95,
                   format: 'webp'
@@ -369,7 +367,6 @@ export default function EnhancedStackGallery({
                 alt={selectedImage.name}
                 
                 className="object-contain rounded-lg"
-                sizes="(max-width: 768px) 100vw, 1200px"
               />
               
               {/* Close button */}

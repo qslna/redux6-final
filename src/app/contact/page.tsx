@@ -135,10 +135,8 @@ export default function ContactPage() {
           <SimpleImageManager
             src="/images/about/memory/IMG_1728.jpeg"
             alt="Contact Hero"
-            fill
             className="object-cover"
             folder="contact"
-            sizes="100vw"
           />
           <div className="absolute inset-0 bg-black/50"></div>
         </div>

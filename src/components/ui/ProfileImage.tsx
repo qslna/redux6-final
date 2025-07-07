@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import NoOptImage from '@/components/NoOptImage';
 import { cn } from '@/utils/cn';
 import { buildImageKitUrl } from '@/lib/imagekit';
 
@@ -71,7 +70,7 @@ export default function ProfileImage({
           'rounded-full'
         )}
       >
-        <NoOptImage
+        <img
           src={buildImageKitUrl(src, {
             width,
             height,
@@ -83,7 +82,6 @@ export default function ProfileImage({
           alt={alt}
           
           className="object-cover"
-          sizes={`${width}px`}
         />
         
         {/* Subtle overlay gradient */}

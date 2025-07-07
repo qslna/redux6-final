@@ -7,7 +7,6 @@ import {
   Plus, X, Upload, Loader2, Grid, Layers, 
   Image as ImageIcon, Video, Play, Pause, Volume2, VolumeX
 } from 'lucide-react';
-import NoOptImage from '@/components/NoOptImage';
 import { getDefaultImages, uploadImageClient, saveImageToStorage, listImagesClient, deleteImageClient } from '@/lib/imagekit-client';
 
 interface MediaItem {
@@ -359,13 +358,11 @@ export default function StaticGallery({
                       </div>
                     </div>
                   ) : (
-                    <NoOptImage
+                    <img
                       src={item.url}
                       alt={item.name}
                       
                       className="object-cover"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      unoptimized
                     />
                   )}
                   
@@ -524,13 +521,11 @@ export default function StaticGallery({
                       </div>
                     </div>
                   ) : (
-                    <NoOptImage
+                    <img
                       src={item.url}
                       alt={item.name}
                       
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      unoptimized
                     />
                   )}
                   
@@ -583,14 +578,12 @@ export default function StaticGallery({
                   className="max-w-full max-h-full rounded-lg"
                 />
               ) : (
-                <NoOptImage
+                <img
                   src={selectedItem.url}
                   alt={selectedItem.name}
                   width={1200}
                   height={800}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
                   className="max-w-full max-h-full object-contain rounded-lg"
-                  unoptimized
                 />
               )}
               

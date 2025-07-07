@@ -2,7 +2,6 @@
 
 import { useState, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import NoOptImage from '@/components/NoOptImage';
 import { 
   Upload, 
   Download, 
@@ -391,7 +390,7 @@ export default function GalleryManager({
               {viewMode === 'grid' ? (
                 <>
                   <div className="relative aspect-square">
-                    <NoOptImage
+                    <img
                       src={buildImageKitUrl(image.url, {
                         width: 200,
                         height: 200,
@@ -401,7 +400,6 @@ export default function GalleryManager({
                       alt={image.name}
                       
                       className="object-cover"
-                      sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 20vw"
                     />
                     {isAdmin && (
                       <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -428,7 +426,7 @@ export default function GalleryManager({
               ) : (
                 <>
                   <div className="w-16 h-16 relative rounded overflow-hidden flex-shrink-0">
-                    <NoOptImage
+                    <img
                       src={buildImageKitUrl(image.url, {
                         width: 64,
                         height: 64,
@@ -438,7 +436,6 @@ export default function GalleryManager({
                       alt={image.name}
                       
                       className="object-cover"
-                      sizes="64px"
                     />
                   </div>
                   <div className="flex-1 ml-4">

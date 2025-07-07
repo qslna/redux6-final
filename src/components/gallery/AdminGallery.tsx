@@ -2,7 +2,6 @@
 
 import { useState, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import NoOptImage from '@/components/NoOptImage';
 import { Plus, X, Upload, Grid, Move, Edit2, Trash2 } from 'lucide-react';
 import { cn } from '@/utils/cn';
 import { buildImageKitUrl } from '@/lib/imagekit';
@@ -185,7 +184,7 @@ export default function AdminGallery({
               onDrop={(e) => handleDrop(e, index)}
             >
               <div className="relative aspect-square rounded-lg overflow-hidden bg-gray-900">
-                <NoOptImage
+                <img
                   src={buildImageKitUrl(image.url, {
                     width: 300,
                     height: 300,
@@ -195,7 +194,6 @@ export default function AdminGallery({
                   alt={image.name}
                   
                   className="object-cover transition-transform duration-300 group-hover:scale-110"
-                  sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
                 />
 
                 {/* Admin overlay */}

@@ -2,7 +2,6 @@
 
 import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import NoOptImage from './NoOptImage';
 import { useToast } from '@/components/ToastProvider';
 import { useAdmin } from '@/hooks/useAdmin';
 
@@ -11,11 +10,10 @@ interface SimpleImageManagerProps {
   alt: string;
   className?: string;
   folder: string;
-  sizes?: string;
-  fill?: boolean;
+  sizes?: string; // ignored
   width?: number;
   height?: number;
-  priority?: boolean;
+  priority?: boolean; // ignored
 }
 
 export default function SimpleImageManager({
@@ -23,11 +21,10 @@ export default function SimpleImageManager({
   alt,
   className = '',
   folder,
-  sizes,
-  fill = false,
+  sizes, // ignored
   width,
   height,
-  priority = false
+  priority = false // ignored
 }: SimpleImageManagerProps) {
   const [currentSrc, setCurrentSrc] = useState(src);
   const [isUploading, setIsUploading] = useState(false);
@@ -83,15 +80,9 @@ export default function SimpleImageManager({
 
   return (
     <div className={`relative group ${className}`}>
-      <NoOptImage
+      <img
         src={hasError ? fallbackSrc : currentSrc}
         alt={alt}
-        fill={fill}
-        width={!fill ? width : undefined}
-        height={!fill ? height : undefined}
-        sizes={sizes}
-        priority={priority}
-        className={`${className} ${isAdmin ? 'cursor-pointer' : ''}`}
         onClick={handleClick}
         onError={() => {
           console.error(`Failed to load image: ${currentSrc}`);

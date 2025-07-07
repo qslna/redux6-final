@@ -2,7 +2,6 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import NoOptImage from '@/components/NoOptImage';
 import { cn } from '@/utils/cn';
 import { StackGalleryProps, GalleryImage } from '@/types';
 import { buildImageKitUrl, createBlurPlaceholder } from '@/lib/imagekit';
@@ -91,7 +90,7 @@ export default function StackGallery({
                   boxShadow: '0 25px 50px rgba(0, 0, 0, 0.3)' 
                 }}
               >
-                <NoOptImage
+                <img
                   src={buildImageKitUrl(image.url, {
                     width: 400,
                     height: 500,
@@ -103,7 +102,6 @@ export default function StackGallery({
                   className="object-cover"
                   placeholder="blur"
                   blurDataURL={createBlurPlaceholder(image.url)}
-                  sizes="(max-width: 768px) 100vw, 400px"
                 />
                 
                 {/* Overlay gradient */}
@@ -164,7 +162,7 @@ export default function StackGallery({
               className="relative max-w-4xl max-h-[90vh] w-full h-full"
               onClick={(e) => e.stopPropagation()}
             >
-              <NoOptImage
+              <img
                 src={buildImageKitUrl(selectedImage.url, {
                   quality: 95,
                   format: 'webp'
@@ -172,7 +170,6 @@ export default function StackGallery({
                 alt={selectedImage.name}
                 
                 className="object-contain rounded-lg"
-                sizes="(max-width: 768px) 100vw, 1200px"
               />
               
               {/* Close button */}

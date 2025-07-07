@@ -139,7 +139,7 @@ export default function AdminGalleryPage() {
                 <p className="text-gray-400 text-sm">Total Images</p>
                 <p className="text-2xl font-bold">{stats.totalImages}</p>
               </div>
-              <NoOptImageIcon className="w-8 h-8 text-blue-500" />
+              <imgIcon className="w-8 h-8 text-blue-500" />
             </div>
           </motion.div>
 

@@ -12,7 +12,6 @@ import VideoThumbnailManager from '@/components/admin/VideoThumbnailManager';
 import StaticGallery from '@/components/gallery/StaticGallery';
 import FloatingParticles from '@/components/ui/FloatingParticles';
 import ScrollProgress from '@/components/ui/ScrollProgress';
-import NoOptImage from '@/components/NoOptImage';
 
 const fashionFilms = [
   {
@@ -283,13 +282,10 @@ export default function FashionFilmPage() {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
-                    <NoOptImage
+                    <img
                       src={getThumbnailUrl(film)}
                       alt={`${film.title} 썸네일`}
-                      fill
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      priority={index < 3}
                     />
                   </motion.div>
                   

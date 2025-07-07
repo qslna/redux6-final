@@ -3,7 +3,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import Link from 'next/link';
-import NoOptImage from '@/components/NoOptImage';
 import { ArrowRight, Instagram, Mail } from 'lucide-react';
 import { fadeIn, staggerContainer } from '@/utils/animations';
 import { buildImageKitUrl } from '@/lib/imagekit';
@@ -267,7 +266,7 @@ export default function DesignersPreview() {
                         transition={{ delay: imgIndex * 0.1 }}
                         className="w-16 h-16 rounded-lg overflow-hidden border-2 border-white/20 bg-gray-900"
                       >
-                        <NoOptImage
+                        <img
                           src={buildImageKitUrl(image, {
                             width: 80,
                             height: 80,
@@ -277,7 +276,6 @@ export default function DesignersPreview() {
                           alt={`${designer.name} work ${imgIndex + 1}`}
                           width={64}
                           height={64}
-                          sizes="64px"
                           className="object-cover w-full h-full"
                         />
                       </motion.div>

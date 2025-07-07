@@ -2,7 +2,6 @@
 
 import { useState, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import NoOptImage from '@/components/NoOptImage';
 import { useAdmin } from '@/hooks/useAdmin';
 import { useToast } from '@/components/ToastProvider';
 import Navigation from '@/components/Navigation';
@@ -472,13 +471,10 @@ export default function AdminPage() {
                             transition={{ duration: 0.3, delay: index * 0.05 }}
                           >
                             <div className="aspect-square relative mb-3 overflow-hidden rounded-lg">
-                              <NoOptImage
+                              <img
                                 src={file.preview}
                                 alt={file.file.name}
-                                fill
-                                sizes="200px"
                                 className="object-cover"
-                                unoptimized
                               />
                               
                               {/* Status Overlay */}

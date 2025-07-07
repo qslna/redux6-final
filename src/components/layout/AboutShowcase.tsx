@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import NoOptImage from '@/components/NoOptImage';
 import { ArrowRight, Eye, Users, Film, Palette, Clock } from 'lucide-react';
 import { fadeIn, staggerContainer } from '@/utils/animations';
 import { buildImageKitUrl } from '@/lib/imagekit';
@@ -126,7 +125,7 @@ export default function AboutShowcase() {
                 >
                   {/* Image */}
                   <div className="relative h-48 overflow-hidden">
-                    <NoOptImage
+                    <img
                       src={buildImageKitUrl(section.image, {
                         width: 400,
                         height: 300,
@@ -136,7 +135,6 @@ export default function AboutShowcase() {
                       alt={section.title}
                       
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                     
                     {/* Gradient Overlay */}

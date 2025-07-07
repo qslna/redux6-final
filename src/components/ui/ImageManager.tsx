@@ -3,7 +3,6 @@
 import { useState, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Upload, X, Plus } from 'lucide-react';
-import NoOptImage from '@/components/NoOptImage';
 import { validateFile } from '@/lib/imagekit';
 import { cn } from '@/utils/cn';
 
@@ -141,11 +140,10 @@ export default function ImageManager({
                 key={index}
                 className="relative aspect-square rounded-lg overflow-hidden bg-gray-100"
               >
-                <NoOptImage
+                <img
                   src={src}
                   alt={`Image ${index + 1}`}
                   
-                  sizes="200px"
                   className="object-cover"
                 />
               </div>
@@ -229,11 +227,10 @@ export default function ImageManager({
                 onDragEnter={() => handleDragEnter(index)}
                 onDrop={handleDragDropReorder}
               >
-                <NoOptImage
+                <img
                   src={src}
                   alt={`Image ${index + 1}`}
                   
-                  sizes="200px"
                   className="object-cover"
                 />
                 
