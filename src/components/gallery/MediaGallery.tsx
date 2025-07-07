@@ -288,6 +288,7 @@ export default function MediaGallery({
                   alt={selectedItem.name}
                   width={1200}
                   height={800}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
                   className="w-full h-auto rounded-lg"
                   style={{ maxHeight: '80vh', objectFit: 'contain' }}
                 />
