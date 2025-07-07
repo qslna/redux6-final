@@ -277,6 +277,7 @@ export default function DesignersPreview() {
                           alt={`${designer.name} work ${imgIndex + 1}`}
                           width={64}
                           height={64}
+                          sizes="64px"
                           className="object-cover w-full h-full"
                         />
                       </motion.div>
