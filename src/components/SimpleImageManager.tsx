@@ -89,7 +89,7 @@ export default function SimpleImageManager({
         fill={fill}
         width={!fill ? width : undefined}
         height={!fill ? height : undefined}
-        sizes={sizes}
+        sizes={sizes || "100vw"}
         priority={priority}
         className={`${className} ${isAdmin ? 'cursor-pointer' : ''}`}
         onClick={handleClick}
