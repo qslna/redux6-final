@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Upload, Trash2, Eye, Plus, Image as ImageIcon, AlertCircle } from 'lucide-react';
 import { useImageKit } from '@/lib/imagekit-client';
 import { buildImageKitUrl } from '@/lib/imagekit';
-import Image from 'next/image';
+import NoOptImage from '@/components/NoOptImage';
 
 interface VideoThumbnailManagerProps {
   videoId: string;
@@ -170,7 +170,7 @@ export default function VideoThumbnailManager({
 
       {/* 썸네일 미리보기 */}
       <div className="relative aspect-video bg-gray-800 rounded-lg mb-4 overflow-hidden">
-        <Image
+        <NoOptImage
           src={getThumbnailUrl()}
           alt={`${videoTitle} 썸네일`}
           fill

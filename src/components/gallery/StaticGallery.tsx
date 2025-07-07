@@ -7,7 +7,7 @@ import {
   Plus, X, Upload, Loader2, Grid, Layers, 
   Image as ImageIcon, Video, Play, Pause, Volume2, VolumeX
 } from 'lucide-react';
-import Image from 'next/image';
+import NoOptImage from '@/components/NoOptImage';
 import { getDefaultImages, uploadImageClient, saveImageToStorage, listImagesClient, deleteImageClient } from '@/lib/imagekit-client';
 
 interface MediaItem {
@@ -359,7 +359,7 @@ export default function StaticGallery({
                       </div>
                     </div>
                   ) : (
-                    <Image
+                    <NoOptImage
                       src={item.url}
                       alt={item.name}
                       fill
@@ -524,7 +524,7 @@ export default function StaticGallery({
                       </div>
                     </div>
                   ) : (
-                    <Image
+                    <NoOptImage
                       src={item.url}
                       alt={item.name}
                       fill
@@ -583,7 +583,7 @@ export default function StaticGallery({
                   className="max-w-full max-h-full rounded-lg"
                 />
               ) : (
-                <Image
+                <NoOptImage
                   src={selectedItem.url}
                   alt={selectedItem.name}
                   width={1200}

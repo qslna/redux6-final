@@ -12,7 +12,7 @@ import VideoThumbnailManager from '@/components/admin/VideoThumbnailManager';
 import StaticGallery from '@/components/gallery/StaticGallery';
 import FloatingParticles from '@/components/ui/FloatingParticles';
 import ScrollProgress from '@/components/ui/ScrollProgress';
-import Image from 'next/image';
+import NoOptImage from '@/components/NoOptImage';
 
 const fashionFilms = [
   {
@@ -283,7 +283,7 @@ export default function FashionFilmPage() {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
-                    <Image
+                    <NoOptImage
                       src={getThumbnailUrl(film)}
                       alt={`${film.title} 썸네일`}
                       fill

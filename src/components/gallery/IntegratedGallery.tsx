@@ -7,7 +7,7 @@ import {
   Plus, X, Upload, Loader2, Grid, Layers, 
   Image as ImageIcon, Video, Play, Pause, Volume2, VolumeX, Trash2
 } from 'lucide-react';
-import Image from 'next/image';
+import NoOptImage from '@/components/NoOptImage';
 import { buildImageKitUrl } from '@/lib/imagekit';
 
 interface MediaItem {
@@ -365,7 +365,7 @@ export default function IntegratedGallery({
                       </div>
                     </div>
                   ) : (
-                    <Image
+                    <NoOptImage
                       src={buildImageKitUrl(item.url, {
                         width: 400,
                         height: 500,
@@ -540,7 +540,7 @@ export default function IntegratedGallery({
                       </div>
                     </div>
                   ) : (
-                    <Image
+                    <NoOptImage
                       src={buildImageKitUrl(item.url, {
                         width: 300,
                         height: 300,
@@ -604,7 +604,7 @@ export default function IntegratedGallery({
                   className="max-w-full max-h-full rounded-lg"
                 />
               ) : (
-                <Image
+                <NoOptImage
                   src={selectedItem.url}
                   alt={selectedItem.name}
                   width={1200}

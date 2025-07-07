@@ -2,7 +2,7 @@
 
 import { useState, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
+import NoOptImage from '@/components/NoOptImage';
 import { 
   Upload, 
   Download, 
@@ -391,7 +391,7 @@ export default function GalleryManager({
               {viewMode === 'grid' ? (
                 <>
                   <div className="relative aspect-square">
-                    <Image
+                    <NoOptImage
                       src={buildImageKitUrl(image.url, {
                         width: 200,
                         height: 200,
@@ -428,7 +428,7 @@ export default function GalleryManager({
               ) : (
                 <>
                   <div className="w-16 h-16 relative rounded overflow-hidden flex-shrink-0">
-                    <Image
+                    <NoOptImage
                       src={buildImageKitUrl(image.url, {
                         width: 64,
                         height: 64,

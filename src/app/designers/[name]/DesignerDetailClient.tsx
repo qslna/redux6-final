@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { notFound, useRouter } from 'next/navigation';
-import Image from 'next/image';
+import NoOptImage from '@/components/NoOptImage';
 import { ArrowDown, Instagram, Mail, MapPin, ExternalLink, ArrowLeft } from 'lucide-react';
 import { fadeIn, staggerContainer } from '@/utils/animations';
 import IntegratedGallery from '@/components/gallery/IntegratedGallery';

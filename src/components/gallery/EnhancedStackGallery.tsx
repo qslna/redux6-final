@@ -2,7 +2,7 @@
 
 import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
+import NoOptImage from '@/components/NoOptImage';
 import { Plus, X, Settings, Eye } from 'lucide-react';
 import { cn } from '@/utils/cn';
 import { StackGalleryProps, GalleryImage } from '@/types';
@@ -245,7 +245,7 @@ export default function EnhancedStackGallery({
                   boxShadow: '0 25px 50px rgba(0, 0, 0, 0.3)' 
                 }}
               >
-                <Image
+                <NoOptImage
                   src={buildImageKitUrl(image.url, {
                     width: 400,
                     height: 500,
@@ -361,7 +361,7 @@ export default function EnhancedStackGallery({
               className="relative max-w-4xl max-h-[90vh] w-full h-full"
               onClick={(e) => e.stopPropagation()}
             >
-              <Image
+              <NoOptImage
                 src={buildImageKitUrl(selectedImage.url, {
                   quality: 95,
                   format: 'webp'

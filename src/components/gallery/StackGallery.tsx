@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
+import NoOptImage from '@/components/NoOptImage';
 import { cn } from '@/utils/cn';
 import { StackGalleryProps, GalleryImage } from '@/types';
 import { buildImageKitUrl, createBlurPlaceholder } from '@/lib/imagekit';
@@ -91,7 +91,7 @@ export default function StackGallery({
                   boxShadow: '0 25px 50px rgba(0, 0, 0, 0.3)' 
                 }}
               >
-                <Image
+                <NoOptImage
                   src={buildImageKitUrl(image.url, {
                     width: 400,
                     height: 500,
@@ -164,7 +164,7 @@ export default function StackGallery({
               className="relative max-w-4xl max-h-[90vh] w-full h-full"
               onClick={(e) => e.stopPropagation()}
             >
-              <Image
+              <NoOptImage
                 src={buildImageKitUrl(selectedImage.url, {
                   quality: 95,
                   format: 'webp'

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
+import NoOptImage from '@/components/NoOptImage';
 import { cn } from '@/utils/cn';
 import { buildImageKitUrl } from '@/lib/imagekit';
 
@@ -71,7 +71,7 @@ export default function ProfileImage({
           'rounded-full'
         )}
       >
-        <Image
+        <NoOptImage
           src={buildImageKitUrl(src, {
             width,
             height,

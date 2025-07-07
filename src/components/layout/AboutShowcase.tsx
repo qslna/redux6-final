@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import Image from 'next/image';
+import NoOptImage from '@/components/NoOptImage';
 import { ArrowRight, Eye, Users, Film, Palette, Clock } from 'lucide-react';
 import { fadeIn, staggerContainer } from '@/utils/animations';
 import { buildImageKitUrl } from '@/lib/imagekit';
@@ -126,7 +126,7 @@ export default function AboutShowcase() {
                 >
                   {/* Image */}
                   <div className="relative h-48 overflow-hidden">
-                    <Image
+                    <NoOptImage
                       src={buildImageKitUrl(section.image, {
                         width: 400,
                         height: 300,

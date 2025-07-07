@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAdmin } from '@/hooks/useAdmin';
 import { Plus, X, Upload, Loader2 } from 'lucide-react';
-import Image from 'next/image';
+import NoOptImage from '@/components/NoOptImage';
 
 interface DynamicStackGalleryProps {
   /** 연결된 하위 페이지/폴더 (예: 'visual-art', 'collective' 등) */
@@ -36,7 +36,7 @@ export default function DynamicStackGallery({
   href,
   stackStyle = 'default'
 }: DynamicStackGalleryProps) {
-  const [images, setImages] = useState<ImageItem[]>([]);
+  const [images, setImages] = useState<NoOptImageItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -258,7 +258,7 @@ export default function DynamicStackGallery({
                 }}
                 style={{ zIndex: images.length - index }}
               >
-                <Image
+                <NoOptImage
                   src={image.url}
                   alt={image.name}
                   fill

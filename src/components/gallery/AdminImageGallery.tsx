@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
+import NoOptImage from '@/components/NoOptImage';
 import { Plus, X, Upload, Trash2, Settings, Grid, List } from 'lucide-react';
 import { cn } from '@/utils/cn';
 import { buildImageKitUrl } from '@/lib/imagekit';
@@ -223,7 +223,7 @@ export default function AdminImageGallery({
             }}
           >
             <div className="relative w-full h-full rounded-lg overflow-hidden shadow-2xl bg-gray-900 border border-white/10">
-              <Image
+              <NoOptImage
                 src={buildImageKitUrl(image.url, {
                   width: 400,
                   height: 500,
@@ -399,7 +399,7 @@ export default function AdminImageGallery({
             {viewMode === 'grid' ? (
               <>
                 <div className="relative aspect-square">
-                  <Image
+                  <NoOptImage
                     src={buildImageKitUrl(image.url, {
                       width: 300,
                       height: 300,
@@ -438,7 +438,7 @@ export default function AdminImageGallery({
             ) : (
               <>
                 <div className="w-16 h-16 relative rounded overflow-hidden flex-shrink-0">
-                  <Image
+                  <NoOptImage
                     src={buildImageKitUrl(image.url, {
                       width: 64,
                       height: 64,

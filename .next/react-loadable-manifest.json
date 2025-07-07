@@ -1,24 +1,22 @@
 {
   "app/page.tsx -> @/components/layout/AboutShowcase": {
-    "id": 98449,
+    "id": 8449,
     "files": [
-      "static/chunks/e37a0b60-60644db7b3ef72f3.js",
-      "static/chunks/aaea2bcf-88b6c30183af664e.js",
-      "static/chunks/565-3b6b48bc781ba0a1.js",
-      "static/chunks/498-aee0304371f44c89.js",
-      "static/chunks/642.edbaccf0c138ac14.js"
+      "static/chunks/e37a0b60-e58e45e1a3a1c327.js",
+      "static/chunks/aaea2bcf-135b10c9c0128862.js",
+      "static/chunks/498-eea33a03a8ee099d.js",
+      "static/chunks/449.fb2c1e21ffe46299.js"
     ]
   },
   "app/page.tsx -> @/components/layout/DesignersPreview": {
-    "id": 30484,
+    "id": 484,
     "files": [
-      "static/chunks/e37a0b60-60644db7b3ef72f3.js",
-      "static/chunks/aaea2bcf-88b6c30183af664e.js",
-      "static/chunks/565-3b6b48bc781ba0a1.js",
-      "static/chunks/498-aee0304371f44c89.js",
-      "static/chunks/181-780c07556f745252.js",
-      "static/chunks/988-ce8312b4fdceff6b.js",
-      "static/chunks/307.370f43703fa211b8.js"
+      "static/chunks/e37a0b60-e58e45e1a3a1c327.js",
+      "static/chunks/aaea2bcf-135b10c9c0128862.js",
+      "static/chunks/498-eea33a03a8ee099d.js",
+      "static/chunks/181-a256ea7c99a5a211.js",
+      "static/chunks/988-f4de5d9e5250829d.js",
+      "static/chunks/484.b306135b5772aaea.js"
     ]
   }
 }
